@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="output.css" />
+    <style>
+      .board {
+        display: grid;
+        grid-template-columns: repeat(3, 150px);
+        grid-gap: 5px;
+        place-content: center;
+        margin-bottom: 20px;
+      }
+
+      .cell {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(129 140 248);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        color: #fff;
+        cursor: pointer;
+        transition: .3s ease-in;
+      }
+
+      .cell:hover {
+        background-color: rgb(152, 160, 238);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main text-center">
+      <h1 class="text-6xl my-10 text-indigo-600 font-semibold tracking-[0.5rem]">Tic Tac Toe</h1>
+      <div id="board" class="board">
+        <div class="cell" onclick="makeMove(0)"></div>
+        <div class="cell" onclick="makeMove(1)"></div>
+        <div class="cell" onclick="makeMove(2)"></div>
+        <div class="cell" onclick="makeMove(3)"></div>
+        <div class="cell" onclick="makeMove(4)"></div>
+        <div class="cell" onclick="makeMove(5)"></div>
+        <div class="cell" onclick="makeMove(6)"></div>
+        <div class="cell" onclick="makeMove(7)"></div>
+        <div class="cell" onclick="makeMove(8)"></div>
+      </div>
+      <button onclick="resetBoard()" class="text-2xl border-2 border-indigo-300 px-4 py-2 rounded-lg text-indigo-500 hover:text-slate-50 hover:bg-indigo-400 transition-all duration-500">Reset</button>
+      <p id="message" class="text-[2rem] text-indigo-400"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
